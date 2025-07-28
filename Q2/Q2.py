@@ -28,8 +28,9 @@ def data_preprocess(root_path):
         label = address.split('\\')[-2].lower()
         labels.append(label_map[label])
 
+        # print message for images processed
         if i % 100 == 0:
-            print(f'[INFO] {i} images processed...')
+            print(f'{i} images processed...')
 
     return np.array(data), np.array(labels)
 
